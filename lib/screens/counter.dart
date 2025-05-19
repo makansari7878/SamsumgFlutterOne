@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:samsumg2proj/screens/FirstScreen.dart';
+import 'package:samsumg2proj/screens/second_screen.dart';
+
 
 class Counter extends StatefulWidget{
+  String value = "";
+  Counter({required this.value});
+
   @override
   State<StatefulWidget> createState() {
-   return Counter_State();
+   return Counter_State(value);
   }
 }
 
 class Counter_State extends State<Counter>{
+
+  late String value;
+  Counter_State(this.value);
 
   String username = '';
   TextEditingController usernameController = TextEditingController();
@@ -47,7 +56,7 @@ class Counter_State extends State<Counter>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("COUNTER"),),
+      appBar: AppBar(title: Text("COUNTER SCREEN"),),
       body: Material(
         color: Colors.lightGreenAccent,
 
@@ -70,14 +79,18 @@ class Counter_State extends State<Counter>{
               ),
               SizedBox(height:10,),
               ElevatedButton(onPressed: (){
-                textProcess();
-                showingToast();
-                showingSnackBar();
+                // textProcess();
+                // showingToast();
+                // showingSnackBar();
+
+                Navigator.of(context).
+                push(MaterialPageRoute(builder:
+                    (context) =>SecondScreen() ));
 
               },
                   child: Text('INCREMENT')),
               SizedBox(height: 30,),
-              Text('Counter is : $username ',
+              Text('Counter is : $value ',
                 /*style: Theme.of(context).textTheme.headlineLarge,*/
                 style: TextStyle(fontSize: 20, color: Colors.redAccent), ),
 

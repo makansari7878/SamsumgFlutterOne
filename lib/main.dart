@@ -3,6 +3,8 @@ import 'package:samsumg2proj/screens/FirstScreen.dart';
 import 'package:samsumg2proj/screens/counter.dart';
 import 'package:samsumg2proj/screens/list_demo.dart';
 import 'package:samsumg2proj/screens/second_screen.dart';
+import 'package:samsumg2proj/screens/dah_board.dart';
+import 'package:samsumg2proj/screens/tab_demo.dart';
 import 'package:samsumg2proj/screens/third_screen.dart';
 
 void main(){
@@ -14,30 +16,14 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          textTheme: TextTheme(
-            headlineLarge: TextStyle(fontSize: 25, color:Colors.blue),
-            bodyMedium: TextStyle(fontSize: 16, color:Colors.purpleAccent)
-          ),
-          colorScheme: ColorScheme.fromSwatch().copyWith(
-            primary: Colors.redAccent,
-            surface: Colors.yellowAccent
-          ),
-          inputDecorationTheme: InputDecorationTheme(
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.black87)
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(width: 2, color: Colors.redAccent),
-            ),
-            labelStyle: TextStyle(color: Colors.teal),
-            hintStyle: TextStyle(color: Colors.deepPurple)
+       routes: {
+        '/' : (context) =>  DahBoard(),
+         '/list' : (context) => ListDemo(),
+         '/second' : (context) => SecondScreen()
+       },
 
-          ),
 
-        ),
-
-        home: Counter()
+       // home: SpDemo()
 
     );
   }

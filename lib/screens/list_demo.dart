@@ -6,7 +6,7 @@ class ListDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('List'),),
+      appBar: AppBar(title: Text('LIST SCREEN'),),
       body: Material(
         child: getLongList() ,
       ),

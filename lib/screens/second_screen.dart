@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'FirstScreen.dart';
+
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});
 
@@ -54,7 +56,10 @@ class SecondScreen extends StatelessWidget {
                 Row(
                   children: [
                     ElevatedButton(onPressed: (){
-                      myAlert(context);
+                     // myAlert(context);
+                      /*Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Firstscreen()),
+                              (route) => false);*/
+                      Navigator.popUntil(context, ModalRoute.withName('/firstroute'));
                     },
                         child: Text('click me'))
                   ],
