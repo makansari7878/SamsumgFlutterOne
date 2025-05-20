@@ -3,7 +3,9 @@ import 'package:samsumg2proj/screens/counter.dart';
 import 'package:samsumg2proj/screens/list_demo.dart';
 
 class Firstscreen extends StatelessWidget {
-  const Firstscreen({super.key});
+  String result = "";
+   Firstscreen({required result});
+
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class Firstscreen extends StatelessWidget {
                 Navigator.of(context).
                 push(MaterialPageRoute(builder:
                     (context) =>Counter(value : "ANSARI"),
-                    settings: RouteSettings(name: '/counter')
+
                 ));
 
               }, child: Text('Go to ListScreen')),

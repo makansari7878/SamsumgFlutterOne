@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:samsumg2proj/screens/FirstScreen.dart';
 import 'package:samsumg2proj/screens/second_screen.dart';
+import 'package:samsumg2proj/screens/tab_demo.dart';
 
 
 class Counter extends StatefulWidget{
@@ -56,7 +57,7 @@ class Counter_State extends State<Counter>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("COUNTER SCREEN"),),
+      appBar: AppBar(title: Text("COUNTER   $username"),),
       body: Material(
         color: Colors.lightGreenAccent,
 
@@ -85,7 +86,7 @@ class Counter_State extends State<Counter>{
 
                 Navigator.of(context).
                 push(MaterialPageRoute(builder:
-                    (context) =>SecondScreen() ));
+                    (context) =>TabDemo() ));
 
               },
                   child: Text('INCREMENT')),

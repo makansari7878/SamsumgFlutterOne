@@ -15,7 +15,7 @@ class TabDemo_State extends State<TabDemo>{
 
   int myCurrentIndex = 0;
   final tabs = [
-    Firstscreen(),
+    Firstscreen( result: "",),
     ListDemo(),
     Counter(value: '',),
   ];

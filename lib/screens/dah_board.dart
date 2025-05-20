@@ -13,7 +13,7 @@ class DahBoard extends StatefulWidget {
 class _DahBoardState extends State<DahBoard> {
   int myCurrentIndex = 0;
   final tabs = [
-    Firstscreen(),
+    //Firstscreen('result'),
     Counter(value: "Ansari"),
     ListDemo(),
   ];
@@ -22,7 +22,7 @@ class _DahBoardState extends State<DahBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("App Dashboard"),
+        //title: const Text("App Dashboard"),
         centerTitle: true,
       ),
       body: tabs[myCurrentIndex],
@@ -30,6 +30,7 @@ class _DahBoardState extends State<DahBoard> {
         currentIndex: myCurrentIndex,
         iconSize: 30,
         selectedFontSize: 20,
+        showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
